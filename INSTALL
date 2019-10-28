@@ -1,0 +1,17 @@
+
+$ autoreconf -fi
+$ mkdir build && cd build
+$ ../configure --prefix=/path/to/install/dir
+
+If some headers or libraries reside in exotic locations, add CPPFLAGS and LDFLAGS.
+Export PATH and LD_LIBRARY_PATH for those libraries to be detected. For example,
+
+$ SPELL_COTS=/path/to/spell/cots
+$ export LD_LIBRARY_PATH=$SPELL_COTS/lib:$LD_LIBRARY_PATH
+$ PATH=$SPELL_COTS/bin:$PATH
+$ ../configure --prefix=/path/to/install/dir CPPFLAGS="-I$SPELL_COTS/include" LDFLAGS="-L$SPELL_COTS/lib"
+
+To enable debugging, add -DWITH_DEBUG to CPPFLAGS.
+
+$ make
+$ make install

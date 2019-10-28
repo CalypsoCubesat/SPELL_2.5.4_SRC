@@ -1,0 +1,53 @@
+SPELL 2.5.4 release notes
+
+---------
+CHANGELOG
+---------
+
+What's new in SPELL 2.5.4
+==========================
+
+** Bug
+    * [SPELL-22] - SPELL crashes if the while condition is being skipped by the operator
+    * [SPELL-25] - Fix Crash when using Recover function in SPELL GUI
+    * [SPELL-30] - SPELL is missing the last entries in the log file when it crashes
+    * [SPELL-34] - SPELL imports a float parameter in TIME format
+    * [SPELL-36] - Verify with OR() call that contains nbw comparators fails
+    * [SPELL-37] - SPELL Deadlock under certain conditions when a Wait gets started while another wait is still in progress
+    * [SPELL-89] - SPELL driver interface that crash while initializing will cause the procedure to die without usable output or any indication about the issue
+    * [SPELL-94] - Wrong Pythonpath for imported procedures
+
+** Enhancement
+    * [SPELL-23] - Cleanup of DEBUG output
+    * [SPELL-24] - Hardening of SPELL protocol
+    * [SPELL-40] - Add Prompt functionality support in the ExecutorCmd
+    * [SPELL-42] - Improve the performance of LoadDictionary by statement reordering
+    * [SPELL-54] - Perfomance issues in SPELL and SPELL GUI
+
+What's new in SPELL 2.5.3
+==========================
+
+* [BUGFIX] Truncate the given value of a tm comparison to 32-bit in case it is being compared to a 32-bit value coming from telemetry
+* [BUGFIX] Fix for scheduling procedure using absolute dates
+
+What's new in SPELL 2.5.2
+==========================
+
+* [BUGFIX] Fix binary operators bw,nbw skipping the last retry
+* [FEATURE] Parse and print SPELL version in the server log
+* [FEATURE] Add release notes to the release.nfo file
+
+What's new in SPELL 2.5.1
+==========================
+
+* [BUGFIX] Fix Verify for large float number comparisons
+* [FEATURE] Autoformat Python code to conform to the PEP 8 style guide
+
+What's new in SPELL 2.5.0
+==========================
+
+* [BUGFIX] Fix command handling options in case of failures
+* [FEATURE] Add Python 2.7.13 support
+* [FEATURE] Update build and start-up environment with configuration validations
+* [FEATURE] Add automated release.nfo generation
+* [FEATURE] Improve SPELL start-up and process termination scripts
